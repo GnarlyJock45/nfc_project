@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Main logo -->
+    <a href="../index.html"><img class="absolute  ml-6 w-6 md:w-10 hover:scale-110 transition" src="../sub_logos/close.png" alt=""></a>
+    
+    <a href="../index.html" class="block w-fit mx-auto ">
+        <img src="../main_logo/Montserrat_page-0001.jpg" class="w-60 my-10 rounded-full" alt="">
+    </a>
+
+    <!-- Main container -->
+    <div class="w-10/12 mx-auto">
+        <form id="myForm" class="flex flex-col md:flex-row justify-center items-center">
+            <input class="hover:bg-gray-50 transition hover:shadow-sm rounded border-2 px-8 py-3 m-4 " type="text" id="myInput"  placeholder="Your Name">
+            <button class="px-10 py-2 md:py-4 w-fit mx-auto md:mx-0 transition hover:bg-[#4b4274] hover:scale-110 bg-[#6F63A5] text-white rounded" type="submit">Submit</button>
+        </form>
+    
+        <p class="text-2xl my-20"><span id="displayValue"></span></p>
+
+        <div id="content" class="hidden md:w-3/4 mx-auto grid-cols-1">
+
+            <!-- Content Box 1 -->
+            <h1 dir="rtl" class="w-fit mx-auto my-8 text-2xl">
+                مركز الملك فهد الوطني لأبحاث السرطان
+            </h1>
+            <div class="grid-cols-1 lg:grid-cols-2 gap-8 md:gap-4 specialityBox">
+                <div class="w-72 shadow-xl ">
+                    <img class="rounded-lg" src="../sub_logos/radiology_images/img_1.jpeg" alt=" VECTRA® M3">
+                </div>
+                <div dir="rtl" class="p-4 w-72 md:w-fit md:p-10 shadow-inner md:text-xl mainColorGray bg-gradient-to-r from-[#E0E0EA] to-[#8CC0E1] border-2 border-gray-500 drop-shadow-xl rounded">
+                    يستخدم المركز الذكاء الاصطناعي لتطوير أدوات جديدة للكشف عن السرطان
+
+                    المبكر وتشخيصه وعلاجه
+                    <br>
+                    على سبيل المثال، طور المركز نظاما قائما على الذكاء الاصطناعي يمكنه تحليل
+
+                    صور الأشعة المقطعية للصدر للكشف عن سرطان الرئة
+                    في مراحله المبكرة.
+                </div>
+            </div>
+
+            <!-- Content Box 2 -->
+            <h1 dir="rtl" class="w-fit mx-auto my-8 text-2xl">
+                مستشفى الملك فيصل التخصصي ومركز الأبحاث 
+            </h1>
+            <div class="grid-cols-1 lg:grid-cols-2 gap-8 md:gap-4 specialityBox">
+                <div class="w-72 shadow-xl ">
+                    <img class="rounded-lg" src="../sub_logos/radiology_images/img_2.jpeg" alt=" VECTRA® M3">
+                </div>
+                <div dir="rtl" class="p-4 w-72 md:w-fit md:p-10 shadow-inner md:text-xl mainColorGray bg-gradient-to-r from-[#E0E0EA] to-[#8CC0E1] border-2 border-gray-500 drop-shadow-xl rounded">
+                    يستخدم المستشفى الذكاء الاصطناعي لتطوير أدوات جديدة لتحسين دقة وتكلفة
+                    التصوير الطبي.
+                    <br>
+                    على سبيل المثال، طور المستشفى نظاما قائما على الذكاء الاصطناعي يمكنه
+                    تقليل جرعة الإشعاع المستخدمة في فحوصات الأشعة المقطعية دون المساس
+                    بجودة الصور.
+                </div>
+            </div>
+            
+            <!-- Content Box 3 -->
+            <h1 dir="rtl" class="w-fit mx-auto my-8 text-2xl">
+                مركز الملك سلمان لأبحاث الإعاقة 
+            </h1>
+            <div class="grid-cols-1 lg:grid-cols-2 gap-8 md:gap-4 specialityBox">
+                <div class="w-72 shadow-xl ">
+                    <img class="rounded-lg" src="../sub_logos/radiology_images/img_3.jpeg" alt=" VECTRA® M3">
+                </div>
+                <div dir="rtl" class="p-4 w-72 md:w-fit md:p-10 shadow-inner md:text-xl mainColorGray bg-gradient-to-r from-[#E0E0EA] to-[#8CC0E1] border-2 border-gray-500 drop-shadow-xl rounded">
+                    يعمل المركز على تطوير عدد من المشاريع البحثية المتعلقة بالذكاء
+                    الاصطناعي في مجال الراديولوجيا، بما في ذلك تطوير نظام قائم
+                    على الذكاء الاصطناعي يمكنه تشخيص إعاقات النطق واللغة من
+                    صور الأشعة
+                    المقطعية للدماغ.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the form and the element where you want to display the value
+            const form = document.getElementById('myForm');
+            const display = document.getElementById('displayValue');
+            const content = document.getElementById('content');
+
+            form.addEventListener('submit', function(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Get the input value
+                const inputValue = document.getElementById('myInput').value;
+
+                // Display the input value
+                display.textContent = "Welcome Dr. " + inputValue +  ". Future radiologist ";
+
+                if (form.style.display === "none") {
+                    form.style.display = "block"
+                    content.style.display = "none"
+                } else {
+                    form.style.display = "none"
+                    content.style.display = "grid"
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

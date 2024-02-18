@@ -1,0 +1,36 @@
+
+/* Main Colors */
+.mainColorViolet {
+    background-color: #6F63A5;
+}
+.mainColorGray {
+    background-color: #E0E0EA;
+}
+.mainColorLightBlue {
+    background-color: #8CC0E1;
+}
+.mainColorBlack {
+    background-color: #313131;
+}
+.mainColorDarkBlue {
+    background-color: #86B3DC;
+}
+
+
+/* Main Styles that are frequently repeated */
+.textBackground {
+    background-color: #efefef;
+    border-radius: 10px;
+    padding: 2px;
+}
+.subLogoStyle {
+    border-radius: 50%;
+    width: 200px;
+
+}
+.specialityBox {
+    display: grid;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-items: center;
+}

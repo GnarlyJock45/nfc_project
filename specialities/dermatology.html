@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dermatology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Main logo -->
+    <a href="../index.html"><img class="absolute  ml-6 w-6 md:w-10 hover:scale-110 transition" src="../sub_logos/close.png" alt=""></a>
+    
+    <a href="../index.html" class="block w-fit mx-auto ">
+        <img src="../main_logo/Montserrat_page-0001.jpg" class="w-60 my-10 rounded-full" alt="">
+    </a>
+
+    <!-- Main container -->
+    <div class="w-10/12 mx-auto">
+        <form id="myForm" class="flex flex-col md:flex-row justify-center items-center">
+            <input class="hover:bg-gray-50 transition hover:shadow-sm rounded border-2 px-8 py-3 m-4 " type="text" id="myInput"  placeholder="Your Name">
+            <button class="px-10 py-2 md:py-4 w-fit mx-auto md:mx-0 transition hover:bg-[#4b4274] hover:scale-110 bg-[#6F63A5] text-white rounded" type="submit">Submit</button>
+        </form>
+    
+        <p class="text-2xl my-20"><span id="displayValue"></span></p>
+
+        <div id="content" class="hidden md:w-3/4 mx-auto grid-cols-1">
+
+            <!-- Content Box 1 -->
+            <h1 class="w-fit mx-auto my-8 text-2xl">VECTRA® M3</h1>
+            <div class="grid-cols-1 lg:grid-cols-2 gap-8 md:gap-4 specialityBox">
+                <div class="w-72 shadow-xl ">
+                    <img class="rounded-lg" src="../sub_logos/derma_images/WhatsApp Image 2024-02-15 at 6.45.21 PM.jpeg" alt=" VECTRA® M3">
+                </div>
+                <div dir="rtl" class="p-4 w-72 md:w-fit md:p-10 shadow-inner md:text-xl mainColorGray bg-gradient-to-r from-[#E0E0EA] to-[#8CC0E1] border-2 border-gray-500 drop-shadow-xl rounded">
+                    نظام تصوير ثلاثي الأبعاد لتحليل وتخطيط العمليات التجميلية والجراحية للوجه
+                    والرقبة، يوفر صورا دقيقة للهيكل والخصائص المختلفة، يعزز التواصل بين الأطباء
+                    والمرضى لتحقيق نتائج مخصصة ورضا المرضى.
+                </div>
+            </div>
+
+            <!-- Content Box 2 -->
+            <h1 class="w-fit mx-auto my-8 text-2xl">SkinVision</h1>
+            <div class="grid-cols-1 lg:grid-cols-2 gap-8 md:gap-4 specialityBox">
+                <div class="w-72 shadow-xl ">
+                    <img class="rounded-lg" src="../sub_logos/derma_images/WhatsApp Image 2024-02-15 at 6.54.47 PM.jpeg" alt=" VECTRA® M3">
+                </div>
+                <div dir="rtl" class="p-4 w-72 md:w-fit md:p-10 shadow-inner md:text-xl mainColorGray bg-gradient-to-r from-[#E0E0EA] to-[#8CC0E1] border-2 border-gray-500 drop-shadow-xl rounded">
+                    هو تطبيق طبي يتيح للمستخدمين فحص بشرتهم للاكتشاف المبكر لسرطان
+                    الجلد. يجمع بين التقنية الذكية وخبرة متخصصين في صحة البشرة لتوفير تقارير
+                    دقيقة وفورية، بالإضافة إلى نصائح شخصية ومسارات صحية مخصصة لتعزيز
+                    الرعاية الفعالة للبشرة.
+                </div>
+            </div>
+
+            <!-- Content Box 3 -->
+            <h1 class="w-fit mx-auto my-8 text-2xl">MelaFind®</h1>
+            <div class="grid-cols-1 lg:grid-cols-2 gap-8 md:gap-4 specialityBox">
+                <div class="w-72 shadow-xl ">
+                    <img class="rounded-lg" src="../sub_logos/derma_images/WhatsApp Image 2024-02-15 at 6.45.22 PM.jpeg" alt=" VECTRA® M3">
+                </div>
+                <div dir="rtl" class="p-4 w-72 md:w-fit md:p-10 shadow-inner md:text-xl mainColorGray bg-gradient-to-r from-[#E0E0EA] to-[#8CC0E1] border-2 border-gray-500 drop-shadow-xl rounded">
+                    جهاز طبي يستخدم تقنيات الذكاء الاصطناعي لاكتشاف سرطان
+                    الجلد من نوع الميلانوما، من خلال تحليل اللون والنمط البصري للبقع الجلدية
+                    المشتبه بها. يهدف إلى تحسين تشخيص سرطان الجلد وتحديد الحالات التي
+                    تستدعي استئصالا جراحيا.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the form and the element where you want to display the value
+            const form = document.getElementById('myForm');
+            const display = document.getElementById('displayValue');
+            const content = document.getElementById('content');
+
+            form.addEventListener('submit', function(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Get the input value
+                const inputValue = document.getElementById('myInput').value;
+
+                // Display the input value
+                display.textContent = "Welcome Dr. " + inputValue +  ". Future dermatologist ";
+
+                if (form.style.display === "none") {
+                    form.style.display = "block"
+                    content.style.display = "none"
+                } else {
+                    form.style.display = "none"
+                    content.style.display = "grid"
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
