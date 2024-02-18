@@ -3,7 +3,7 @@
 .mainColorViolet {
     /* background-color: #eae8f4; */
 
-    background-color: #a197d1;
+    /* background-color: #473b85; */
     
     background-color: #6F63A5;
 }
@@ -44,3 +44,10 @@
     margin-bottom: 25px;
     justify-items: center;
 }
+
+
+.gradient-background-sub-text {
+    background-image: linear-gradient(90deg, #6F63A5, #473b85);
+    color: white;
+  }
+  
