@@ -51,3 +51,33 @@
     color: white;
   }
   
+
+.grid-item {
+    border-bottom: none;
+    border-right: 1px solid #000000a4; /* Creates a vertical line to the right of each grid item */
+}
+.grid-item:last-child {
+border-right: none; 
+}
+
+/* .grid-item-bottom {
+    border-bottom: 1px solid #000000a4;
+    padding: 20px;
+} */
+/* .grid-item-bottom:last-child {
+border-bottom: none;
+} */
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .grid-item {
+        border-bottom: 1px solid #000000a4; /* Creates a vertical line to the right of each grid item */
+        padding: 20px;
+    }
+    
+    .grid-item:last-child {
+        border-bottom: none; 
+        }
+  }
