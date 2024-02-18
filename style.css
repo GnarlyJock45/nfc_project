@@ -1,12 +1,20 @@
 
 /* Main Colors */
 .mainColorViolet {
+    /* background-color: #eae8f4; */
+
+    background-color: #a197d1;
+    
     background-color: #6F63A5;
 }
 .mainColorGray {
+    /* background-color: #ececf6; */
+
     background-color: #E0E0EA;
 }
 .mainColorLightBlue {
+    /* background-color: #c7deec; */
+    
     background-color: #8CC0E1;
 }
 .mainColorBlack {
